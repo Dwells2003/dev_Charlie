@@ -1,0 +1,154 @@
+<xmp>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>gameTracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Agu+Display&display=swap');
+
+body { 
+  font-family: "Agu Display", serif;
+  background-color: #ffc196;
+  margin: 20px;
+  padding: 20px;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="28" height="49" viewBox="0 0 28 49"%3E%3Cg fill-rule="evenodd"%3E%3Cg id="hexagons" fill="%239C92AC" fill-opacity="0.4" fill-rule="nonzero"%3E%3Cpath d="M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+li {font-size: 1.8em;
+  border: dashed 2px gold;
+  margin: 4px;
+  background-color: white;
+}
+h1 { 
+  font-family: "Agu Display", serif;
+  background-color: #6667ab;
+  margin: 20px;
+  padding: 20px;
+}
+footer {
+  font-family: "Agu Display", serif;
+  background-color: #ffc196;
+  margin: 20px;
+  padding: 10px;
+}
+.btn btn-primary {
+  background-color: purple;
+}
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--
+Author: Daniel Wells
+Date: 1/21/25
+Class: CIS 376-01 
+ -->
+
+ 
+    <h1>Daniel's Game Tracker</h1>
+  
+
+  
+    <p>List of games that I have played and want to play </p>
+ 
+
+  
+
+    <p>A place to enter games that I both have played and want to play while at
+      <a href="https://una.edu/" target="una">UNA</a>
+    </p>
+
+  
+
+  <!-- html form helped from w3schools -->
+  
+    <!-- <form> -->
+    <label for="gameArea">New game played:</label><br>
+    <!--   <input type="text" id="newGame" placeholder="Enter a new game">
+<br> -->
+    <textarea id="gameArea" rows="4" cols="50">
+</textarea>
+    <!--   <input type="submit" value="save game addition"> -->
+    <button id="newGame" class="btn btn-primary"> save game addition...</button>
+    <!-- </form>  -->
+  
+
+  <h4> Games Played: </h4>
+  <ul class="list-group">
+    <li id="firstGame" class="list-group-item list-group-item-primary"> Half-Life </li>
+    <li class="list-group-item list-group-item-primary"> Subnautica </li>
+    <li class="list-group-item list-group-item-primary"> Team Fortress 2 </li>
+    <li class="list-group-item list-group-item-primary"> Dying Light </li>
+    <li class="list-group-item list-group-item-primary"> Lethal Company </li>
+  </ul>
+<br><br>
+  link to the <a href="https://www.half-life.com/en/home/" target="OG">Half-Life website</a>
+  <br>
+  link to the <a href="https://store.steampowered.com/app/1684410/Seal_World/" target="OG">Seal World Game</a>
+  <br><br><br>
+  <h4> Games I want to play: </h4>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-warning"> Seal World 🦭 </li>
+    <li class="list-group-item list-group-item-warning"> Monster Hunter Wilds </li>
+    <li class="list-group-item list-group-item-warning"> Escape from Tarkov </li>
+    <li class="list-group-item list-group-item-warning"> Satisfactory </li>
+
+  </ul>
+
+
+<!-- New code is the footer -->
+<footer>
+  link to the <a href="https://codepen.io/Dwells2003/pen/YPKLJrJ" target="OG">OG codepen</a>
+  <br><br><br>
+  <img src="https://gist.github.com/user-attachments/assets/0e6b68db-7be1-497b-a93a-71e081f6218b" alt = "wireframe" style="width:500px;height:500px;">
+</footer>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+<script>
+// $ = JQ land
+// 4(stuff in here) = js selector (same as css)
+// document = DOM, O for object
+// .ready() is a method() for the document.
+// stuff inside the .ready () = parameter
+// this stuff: function(){} ... IIFE, immediatley invoked f/n expression
+//
+
+$(document).ready(
+  function(){
+// code goes here
+    
+    $("#newGame").on("click", function(){
+      //call f/n
+      let statusText = underConstruction("not ready");
+      //update the status
+      $("#newGame").text('Not yet working').prop("disabled", true);
+      
+    });
+    
+    //pass a status (ready or not ready) and get back a message for user
+//rn, not ready
+    
+   function underConstruction(status){
+     return "Not yet ready, bruh"
+   };
+  }
+);
+
+//  document.body.style.backgroundColor = "magenta";
+//  var el = document.getElementById("firstGame");
+//  el.interText = "Who cares about my first game";
+
+//  $("body").css("background-color", "teal");
+//  $("#firstGame").css("background-color", "pink");
+</script>
+</body>
+</html>
+<xmp>
