@@ -5,13 +5,41 @@
 body {  
   background-image: url('../images/clouds.png');
   background-size: 1000px;
+  color: #ffffff;
 }
 
 .card {
   margin: 0.5em
 }
 
+h1 {
+    color: #ffffff; 
+}
+
+p {
+    color: #ffffff; 
+}
 
 footer {
+    color: #ffffff; 
+}
+
+div {
+    color: #ffffff; 
+}
+
+span {
+    color: #ffffff; 
+}
+
+h6 {
+    color: #ffffff; 
+}
+
+h2 {
+    color: #ffffff; 
+}
+
+h3 {
     color: #ffffff; 
 }
