@@ -1,0 +1,18 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto&display=swap");
+
+body {  
+  background-image: url(https://images.unsplash.com/photo-1737496538329-a59d10148a08?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Mzk0NjUzNzd8&ixlib=rb-4.0.3&q=85);
+}
+
+.card {
+  margin: 0.5em
+}
+
+
+.footer {
+position: fixed;
+bottom: 0;
+width: 100%;
+}
