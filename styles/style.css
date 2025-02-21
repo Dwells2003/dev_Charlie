@@ -3,7 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto&display=swap");
 
 body {  
-  background-image: url(https://images.unsplash.com/photo-1737496538329-a59d10148a08?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3Mzk0NjUzNzd8&ixlib=rb-4.0.3&q=85);
+  background-image: url('../images/clouds.png');
+  background-size: 1000px;
 }
 
 .card {
